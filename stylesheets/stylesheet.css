@@ -56,11 +56,11 @@ header h1 {
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
 }
-
+/*
 header h1:before {
   content: "./ ";
   font-size: 24px;
-}
+}*/
 
 header h2 {
   font-size: 18px;
