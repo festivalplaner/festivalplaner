@@ -6,8 +6,11 @@ var mongoose = require('mongoose'),
 var ArtistSchema = new Schema({
   id: String,
   name: String,
-  url: String,
-  text: String
+  passportnr: String,
+  mail: String,
+  band: { type: Schema.Typers.ObjectId, ref: 'Band' },
+  room: { type: Schema.Typers.ObjectId, ref: 'Room' },
+  flight:{ type: Schema.Typers.ObjectId, ref: 'Flight' }
 });
 
 ArtistSchema.virtual('date')
