@@ -10,7 +10,7 @@ var ConcertSchema = new Schema({
   soundcheckstart: { type: Date },
   soundcheckend: { type: Date },
   location: String,
-  band: { type: Schema.Typers.ObjectId, ref: 'Band' },
+  band: { type: Schema.Types.ObjectId, ref: 'Band' },
 });
 
 ConcertSchema.virtual('date')

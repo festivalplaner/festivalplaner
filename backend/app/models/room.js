@@ -7,8 +7,8 @@ var RoomSchema = new Schema({
   id: String,
   roomnumber: String,
   start: { type: Date },
-  end: { type: Date }
-  hotel: { type: Schema.Typers.ObjectId, ref: 'Hotel' }
+  end: { type: Date },
+  hotel: { type: Schema.Types.ObjectId, ref: 'Hotel' }
 });
 
 RoomSchema.virtual('date')

@@ -8,9 +8,9 @@ var ArtistSchema = new Schema({
   name: String,
   passportnr: String,
   mail: String,
-  band: { type: Schema.Typers.ObjectId, ref: 'Band' },
-  room: { type: Schema.Typers.ObjectId, ref: 'Room' },
-  flight:{ type: Schema.Typers.ObjectId, ref: 'Flight' }
+  band: { type: Schema.Types.ObjectId, ref: 'Band' },
+  room: { type: Schema.Types.ObjectId, ref: 'Room' },
+  flight:{ type: Schema.Types.ObjectId, ref: 'Flight' }
 });
 
 ArtistSchema.virtual('date')

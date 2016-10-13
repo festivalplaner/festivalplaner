@@ -7,7 +7,7 @@ var BandSchema = new Schema({
   id: String,
   name: String,
   contact: String,
-  raider: { type: Schema.Typers.ObjectId, ref: 'Raider' }
+  raider: { type: Schema.Types.ObjectId, ref: 'Raider' }
 });
 
 BandSchema.virtual('date')

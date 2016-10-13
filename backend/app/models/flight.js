@@ -11,7 +11,7 @@ var FlightSchema = new Schema({
   end: { type: Date }
 });
 
-ArtistSchema.virtual('date')
+FlightSchema.virtual('date')
   .get(function(){
     return this._id.getTimestamp();
   });
