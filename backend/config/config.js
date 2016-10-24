@@ -8,8 +8,8 @@ var config = {
     app: {
       name: 'backend'
     },
-    port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/festival-backend-development'
+    port: process.env.PORT || 3030,
+    db: process.env.MONGODB || 'mongodb://db/festival-backend-development'
   },
 
   test: {
@@ -17,8 +17,8 @@ var config = {
     app: {
       name: 'backend'
     },
-    port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/festival-backend-test'
+    port: process.env.PORT || 3030,
+    db: process.env.MONGODB || 'mongodb://db/festival-backend-test'
   },
 
   production: {
@@ -26,8 +26,8 @@ var config = {
     app: {
       name: 'backend'
     },
-    port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/festival-backend-production'
+    port: process.env.PORT || 3030,
+    db: process.env.MONGODB || 'mongodb://db/festival-backend-production'
   }
 };
 
