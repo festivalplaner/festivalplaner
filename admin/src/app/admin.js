@@ -2,7 +2,7 @@ angular.module('FestivalPlanerAdmin', ['ng-admin', 'angular-jwt', 'satellizer'])
 .constant('Config', {
   ENV: {
     'SERVER_URL': 'http://localhost:3001',
-    'GITHUB_CLIENT_ID': 'd03b234ae7ea7d56bc6e'
+    'GITHUB_CLIENT_ID': 'd18c2369e262ab59c975'
   }
 })
 .config(['RestangularProvider', function(RestangularProvider) {
