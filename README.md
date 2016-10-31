@@ -4,7 +4,7 @@ the goal of this Project is to make the planning of your Festival easier and wil
 !!! This Project is in its very early Stages, feel free to look around, but don't expect anything to run yet ;)
 
 ## Docker
-use `docker-compose up -d` to run with Docker. Thanks to @lbischof
+use `docker-compose up -d` to run with Docker. Thanks to [https://github.com/lbischof](@lbischof)
 
 ## Local Development
 - Install mongodb
