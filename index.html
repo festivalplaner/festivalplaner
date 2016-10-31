@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Festivalplaner : ">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Festivalplaner by festivalplaner</title>
+    <title>Festivalplaner</title>
   </head>
 
   <body>
 
-    <header>
-      <div class="container">
-        <h1>Festivalplaner</h1>
-        <h2></h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/festivalplaner/festivalplaner">View on GitHub</a>
 
-        <section id="downloads">
-          <a href="https://github.com/festivalplaner/festivalplaner/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/festivalplaner/festivalplaner/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/festivalplaner/festivalplaner" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+          <h1 id="project_title">Festivalplaner</h1>
+          <h2 id="project_tagline"></h2>
 
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a id="festivalplaner" class="anchor" href="#festivalplaner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Festivalplaner</h3>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/festivalplaner/festivalplaner/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/festivalplaner/festivalplaner/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="festivalplaner" class="anchor" href="#festivalplaner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Festivalplaner</h1>
 
 <p>the goal of this Project is to make the planning of your Festival easier and will help you to get rid of all the Excel-Sheets and Word-Document siting around on your share.</p>
 
 <p>!!! This Project is in its very early Stages, feel free to look around, but don't expect anything to run yet ;)</p>
+
+<h2>
+<a id="docker" class="anchor" href="#docker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Docker</h2>
+
+<p>use <code>docker-compose up -d</code> to run with Docker. Thanks to <a href="https://github.com/lbischof">@lbischof</a> </p>
+
+<h2>
+<a id="local-development" class="anchor" href="#local-development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Local Development</h2>
+
+<ul>
+<li>Install mongodb</li>
+<li>Install gulp and bower <code>npm install -g gulp bower</code>
+</li>
+<li>For the Backend run <code>npm install</code> to install and <code>gulp</code> to run</li>
+<li>For the Adminfrontend run <code>npm install</code> and <code>bower install</code> for installation and <code>gulp serve</code> to run</li>
+</ul>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licence</h2>
+
+<p>This Project is licensed under the Affero General Public License version 3 or later.</p>
       </section>
     </div>
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Festivalplaner maintained by <a href="https://github.com/festivalplaner">festivalplaner</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
