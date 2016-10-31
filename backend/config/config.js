@@ -8,8 +8,24 @@ var config = {
     app: {
       name: 'backend'
     },
-    port: process.env.PORT || 3030,
-    db: process.env.MONGODB || 'mongodb://db/festival-backend-development'
+    port: process.env.PORT || 3001,
+    db: process.env.MONGODB || 'mongodb://localhost/festival-backend-development',
+    jwt: {
+      secretOrKey: 'secret',
+      authScheme: 'Bearer'
+    },
+    github: {
+      admin: {
+        clientId: '',
+        clientSecret: ''
+      }
+    },
+    cors: {
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:3003',
+      ]
+    }
   },
 
   test: {
