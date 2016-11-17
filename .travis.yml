@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 'stable'
+  - '0.12'
+env:
+  - TEST_DIR=admin
+
+before_script:
+  - npm install -g gulp
+  - npm install -g bower
+  - cd $TEST_DIR && npm install
+  - cd $TEST_DIR && bower install
+  - cd $TEST_DIR && gulp --cordova "prepare"
+script: cd $TEST_DIR && gulp build
