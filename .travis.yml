@@ -8,7 +8,7 @@ env:
 before_script:
   - npm install -g gulp
   - npm install -g bower
-  - cd $TEST_DIR && npm install
-  - cd $TEST_DIR && bower install
-  - cd $TEST_DIR && gulp --cordova "prepare"
-script: cd $TEST_DIR && gulp build
+  - cd $TEST_DIR && npm install && cd -
+  - cd $TEST_DIR && bower install && cd -
+  - cd $TEST_DIR && gulp --cordova "prepare" && cd -
+script: cd $TEST_DIR && gulp build && cd -
