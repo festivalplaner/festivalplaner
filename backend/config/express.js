@@ -35,7 +35,7 @@ module.exports = function(app, config) {
   });
 
   var apis = glob.sync(config.root + '/app/endpoints/*.js');
-  controllers.forEach(function (api) {
+  apis.forEach(function (api) {
     require(api)(app);
   });
 
