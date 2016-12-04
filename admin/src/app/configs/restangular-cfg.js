@@ -2,7 +2,7 @@
 
 angular.module('FestivalPlanerAdmin')
 .config(function(RestangularProvider) {
-  RestangularProvider.addFullRequestInterceptor(function(element, operation, what, url, headers, params, httpConfig) {
+  RestangularProvider.addFullRequestInterceptor(function(element, operation, what, url, headers, params) {
     if (operation == 'getList') {
       var sortPrefix = params._sortDir == 'DESC' ? '-' : '';
       params.sort = sortPrefix + params._sortField;
@@ -16,7 +16,7 @@ angular.module('FestivalPlanerAdmin')
     }
     return { params: params };
   });
-  RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
+  RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response) {
     if (operation == 'getList') {
       // loading count the hacky way while waiting for https://github.com/mgonto/restangular/issues/1153
       var request = new XMLHttpRequest();
@@ -24,7 +24,7 @@ angular.module('FestivalPlanerAdmin')
       request.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem('satellizer_token'));
       request.send(null);
       if (request.status === 200) {
-        response.totalCount = JSON.parse(request.responseText).count;
+        response.totalCount = angular.fromJson(request.responseText).count;
       }
     }
     return data;

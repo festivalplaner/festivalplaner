@@ -48,6 +48,23 @@ angular.module('FestivalPlanerAdmin')
    ]);
    admin.addEntity(artists);
 
+    var userCollection = nga.collection(users)
+    .name('recent_users')
+    .title('Recent users')
+    .perPage(10)
+    .fields([
+      nga.field('_id'),
+      nga.field('github.username').label('GitHub'),
+      nga.field('admin', 'boolean').validation({ required: true }).label('Admin')
+    ])
+    .sortField('_id')
+    .sortDir('DESC')
+    .order(2);
+
+    admin.dashboard(
+    nga.dashboard()
+      .addCollection(userCollection)
+  );
   // attach the admin application to the DOM and run it
   nga.configure(admin);
 });
