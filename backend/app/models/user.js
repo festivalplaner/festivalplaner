@@ -45,9 +45,6 @@ UserSchema.methods.updateFromGithub = function (profile, next) {
 UserSchema.methods.isAdmin = function() {
   return this.admin;
 };
-UserSchema.methods.isGameMaster = function() {
-  return true;
-};
 
 mongoose.model('User', UserSchema);
 

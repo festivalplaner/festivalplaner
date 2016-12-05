@@ -2,6 +2,7 @@ var gulp = require('gulp'),
   nodemon = require('gulp-nodemon'),
   plumber = require('gulp-plumber'),
   livereload = require('gulp-livereload'),
+  nodeInspector = require('gulp-node-inspector'),
   sass = require('gulp-sass');
 
 gulp.task('sass', function () {
@@ -30,7 +31,13 @@ gulp.task('develop', function () {
     this.stderr.pipe(process.stderr);
   });
 });
-
+gulp.task('debug', function() {
+  gulp.src([])
+    .pipe(nodeInspector({
+      debugPort: 3003,
+      webPort: 3004,
+    }));
+});
 gulp.task('default', [
   'sass',
   'develop',
