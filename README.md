@@ -9,9 +9,8 @@ use `docker-compose up -d` to run with Docker. Thanks to [@lbischof](https://git
 
 ## Local Development
 - Install mongodb
-- Install gulp and bower `npm install -g gulp bower`
-- For the Backend run `npm install` to install and `gulp` to run
-- For the Adminfrontend run `npm install` and `bower install` for installation and `gulp serve` to run
+- For the Backend run `npm install` to install and `npm run gulp` to run
+- For the Adminfrontend run `npm install` for installation and `npm start` to run
 
 ## Licence
 This Project is licensed under the Affero General Public License version 3 or later.
